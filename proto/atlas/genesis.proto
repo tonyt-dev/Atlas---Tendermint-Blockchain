@@ -1,0 +1,14 @@
+syntax = "proto3";
+package cosmonaut.atlas.atlas;
+
+import "gogoproto/gogo.proto";
+import "atlas/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/cosmonaut/Atlas/x/atlas/types";
+
+// GenesisState defines the atlas module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
